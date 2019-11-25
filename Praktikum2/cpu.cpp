@@ -101,7 +101,7 @@ void CPU::run(string filename)
    }
    else{
        aktiveProzesse.push_back(p);
-
+        p->setPpid(id);
        pc = p->getPc();
        reg = p->getReg();
        p->incrementLaufzeit();

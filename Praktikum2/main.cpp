@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
     CPU c;
-    Prozess* runningProcess;
+    Prozess* runningProcess = nullptr;
     c.run("init.txt");
 
     while(1){

@@ -1,10 +1,10 @@
 D 0
 A 2
-R file_a
+R file_a.txt
 A 60
 B
-R file_b
+R file_b.txt
 S 20
 B
-R file_c
+R file_c.txt
 X
