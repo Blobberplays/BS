@@ -48,6 +48,7 @@ private:
     int reg = 0;
     int prio = 0;
     int startzeit = 0;
+    bool blocked =false;
     vector<vector<string>>befehle;
 
 };

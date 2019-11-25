@@ -25,7 +25,7 @@ class CPU
 {
 public:
     CPU(int pc = 0, int reg = 0, int id = 0);
-    int step(int);
+    void step(int);
     void block(int);
     void unblock();
     void quit();
@@ -40,6 +40,8 @@ public:
     vector<pair<string,string>>& readfile(const string &filename);
     Prozess* findAktiveProzess(int id);
     Prozess* findBlockierteProzess(int id);
+    bool deleteFromAktiveProzesse(int id);
+    bool deleteFromBlockierteProzesse(int id);
 
     int getId() const;
     void setId(int value);

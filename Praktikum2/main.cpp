@@ -31,7 +31,7 @@ int main()
             }else if(runningProcess->befehlePair.at(c.getPc()).first=="B"){
 
             }else if(runningProcess->befehlePair.at(c.getPc()).first=="X"){
-
+                c.exit();
             }else if(runningProcess->befehlePair.at(c.getPc()).first=="R"){
                 c.run(runningProcess->befehlePair.at(c.getPc()).second);
                 break;
