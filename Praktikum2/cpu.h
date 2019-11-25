@@ -24,21 +24,34 @@ using namespace std;
 class CPU
 {
 public:
-    CPU();
+    CPU(int pc = 0, int reg = 0, int id = 0);
     int step(int);
     void block(int);
     void unblock();
     void quit();
     void print();
-    void add();
-    void substract();
-    void define();
+
+    void add(int i);
+    void substract(int i);
+    void define(int i);
     void block();
     void exit();
     void run(string);
-    vector<vector<string>> readfile(const string &filename);
+    vector<pair<string,string>>& readfile(const string &filename);
+    Prozess* findAktiveProzess(int id);
+    Prozess* findBlockierteProzess(int id);
 
-private:
+    int getId() const;
+    void setId(int value);
+
+    int getReg() const;
+    void setReg(int value);
+
+    int getPc() const;
+    void setPc(int value);
+
+
+//private:
     int id;
     int reg;
     int pc;

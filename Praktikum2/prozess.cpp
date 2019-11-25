@@ -12,6 +12,11 @@ Prozess::Prozess(int ppid, int laufzeit, int pc, int reg, int prio, int startzei
     this->startzeit = startzeit;
 }
 
+Prozess::~Prozess()
+{
+
+}
+
 int Prozess::getPid() const
 {
     return pid;

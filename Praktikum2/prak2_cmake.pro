@@ -11,10 +11,6 @@ HEADERS = \
 
 SOURCES = \
    $$PWD/cpu.cpp \
-   $$PWD/file_a.txt \
-   $$PWD/file_b.txt \
-   $$PWD/file_c.txt \
-   $$PWD/init.txt \
    $$PWD/main.cpp \
    $$PWD/prozess.cpp \
    $$PWD/scheduler.cpp \

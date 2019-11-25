@@ -11,8 +11,8 @@ using namespace std;
 class Prozess
 {
 public:
-    Prozess(int ppid = 0, int laufzeit = 0, int pc = 0, int reg = 0, int prio = 0, int startzeit = 0);
-
+    Prozess(int ppid = -1, int laufzeit = 0, int pc = 0, int reg = 0, int prio = 0, int startzeit = 0);
+    ~Prozess();
     int getPid() const;
     void setPid(int value);
 
@@ -39,15 +39,17 @@ public:
 
     void incrementLaufzeit();
 
+    vector<pair<string,string>> befehlePair;
 private:
-    int pid = NULL;
-    int ppid = NULL;
-    int laufzeit = NULL;
-    int pc = NULL;
-    int reg = NULL;
-    int prio = NULL;
-    int startzeit = NULL;
+    int pid = 0;
+    int ppid = 0;
+    int laufzeit = 0;
+    int pc = 0;
+    int reg = 0;
+    int prio = 0;
+    int startzeit = 0;
     vector<vector<string>>befehle;
+
 };
 
 #endif // PROZESS_H
