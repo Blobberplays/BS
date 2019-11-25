@@ -10,23 +10,11 @@
 
 using namespace std;
 
-/*struct Prozess{
-  int pid = NULL;
-  int ppid = NULL;
-  int laufzeit = NULL;
-  int pc = NULL;
-  int reg = NULL;
-  int prio = NULL;
-  int startzeit = NULL;
-  vector<vector<string>>befehle;
-};*/
-
 class CPU
 {
 public:
     CPU(int pc = 0, int reg = 0, int id = 0);
     void step(int);
-    void block(int);
     void unblock();
     void quit();
     void print();

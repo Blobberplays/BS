@@ -91,22 +91,24 @@ void CPU::define(int i)
     pc++;
 }
 
-void CPU::block(int i)
+void CPU::block()
 {
     string command;
     cout << "Prozess wurde geblockt!"<<endl;
     cout << "Geben sie kommando ein N,U,P oder Q"<<endl;
     cin >> command;
     while(1){
-        if(command == "S"){
-
-        }else if(command == "U"){
+        if(command[0] == 'S'){
+            if(command.at(2)==NULL)//if no input from user
+                step(1);
+            step(stoi(command.c_str()));
+        }else if(command.at(0) == 'U'){
             unblock();
             return;
-        }else if(command == "P"){
+        }else if(command.at(0) == 'P'){
             print();
             break;
-        }else if(command == "Q"){
+        }else if(command.at(0) == 'Q'){
             quit();
         }
 
