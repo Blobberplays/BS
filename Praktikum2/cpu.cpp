@@ -101,7 +101,7 @@ void CPU::block()
         if(command[0] == 'S'){
             if(command.at(2)==NULL)//if no input from user
                 step(1);
-            step(stoi(command.c_str()));
+            step(stoi(command.substr(2,1)));
         }else if(command.at(0) == 'U'){
             unblock();
             return;
